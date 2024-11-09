@@ -1,38 +1,29 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main(){
-    float Vv=0;
-    char letra='s';
-    char foco[100];
+	float Np1=0, Np2=0, Np3=0 ,NT=0;
+cout<<"Registro de notas\n"<<endl;
 
-    cout<<"Encendido de un foco LED "<<endl;
+cout<<"Ingrese el valor de la nota del primer parcial: ";  cin>>Np1;
 
-    cout<<"Ingrese el valor del voltaje para encender el foco LED :";    cin>> Vv;
+cout<<"Ingrese el valor de la nota del segundo parcial: "; cin>>Np2;
 
-    if(Vv>=1,8 && Vv<=3,3){
-        cout<<"El voltaje aplicado es adecuado"<<endl;
-    }
-    else{
-        cout<<"El voltaje aplicado no es adecuado, ingrese otro valor para el voltaje"<<endl;
-        exit(0);
-    }
-    cout<<" ¿El LED esta encendido?: "; cin>>foco;
+cout<<"Ingrese el valor de la nota del tercer parcial: "; cin>>Np3;
 
-    if(foco[0]=='s'){
-        cout<<"El foco esta encendido"<<endl;
-    }
 
-    else{
-        cout<<"El foco no esta encendido (verificar posibles fallas)"<<endl;
-    }
+NT=(Np1+Np2+Np3)/3;
+cout<<"La nota total del semestre es: "<<NT<<"\n"<<endl;
 
-return 0;
-
+if(NT>=14 && NT<=20){
+	cout<<"El alumno ha aprobado la materia"<<endl;
 }
-
-
-
-
-
+else if(NT>=0 && NT<14){
+	cout<<"El alumno ha reprobado la materia"<<endl;
+}
+else{
+	cout<<"Error , ingrese valores validos (rango de notas: 0-20)"<<endl;
+}
+return 0;
+}
