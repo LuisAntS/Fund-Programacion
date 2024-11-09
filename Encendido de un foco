@@ -18,7 +18,7 @@ int main(){
         cout<<"El voltaje aplicado no es adecuado, ingrese otro valor para el voltaje"<<endl;
         exit(0);
     }
-    cout<<" ¿El LED esta encendido?: "; cin>>foco;
+    cout<<" Â¿El LED esta encendido?: "; cin>>foco;
 
     if(foco[0]=='s'){
         cout<<"El foco esta encendido"<<endl;
